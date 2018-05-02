@@ -1,12 +1,12 @@
 'use strict';
 
-var dayjs = require('dayjs');
 var getBraziliansYearHolidays = require('./lib/brazilianHolidays');
+var parse = require('./lib/parse');
 
 var ehDiaUtil = function(date) {
+    var given = parse(date);
 
-    var given = dayjs(date);
-    var dayOfWeek = given.toDate().getDay();
+    var dayOfWeek = given.getDay();
     var isSaturday = dayOfWeek === 6;
     var isSunday = dayOfWeek === 0;
 
@@ -14,14 +14,16 @@ var ehDiaUtil = function(date) {
         return false;
     }
 
-    var holidays = getBraziliansYearHolidays(given.year());
+    var year = given.getFullYear();
+    var holidays = getBraziliansYearHolidays(year);
     for (var i = 0; i < holidays.length; i++) {
         var holiday = holidays[i];
-        var date = holiday.date.date()
-        var month = holiday.date.month()
-        
-        var givenDate = given.date()
-        var givenMonth = given.month()
+        var date = holiday.date.getDate();
+        var month = holiday.date.getMonth();
+
+        var givenDate = given.getDate();
+
+        var givenMonth = given.getMonth();
 
         if (givenDate === date && givenMonth === month) {
             return false;
