@@ -22,7 +22,6 @@ var ehDiaUtil = function(date) {
     var month = holiday.date.getMonth();
 
     var givenDate = given.getDate();
-
     var givenMonth = given.getMonth();
 
     if (givenDate === date && givenMonth === month) {
