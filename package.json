@@ -1,8 +1,9 @@
 {
   "name": "eh-dia-util-slim",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Hoje é um dia útil? Qual é o próximo dia útil? Pequena lógica para determinar o próximo (ou se hoje é) dia útil considerando fériados nacionais (móveis ou não).",
   "main": "index.js",
+  "types": "index.d.ts",
   "directories": {
     "test": "test"
   },
@@ -38,8 +39,6 @@
     "supervisor": "^0.12.0"
   },
   "dependencies": {
-    "chai": "^4.1.2",
-    "dayjs": "^1.5.16",
-    "mocha": "^3.5.0"
+    "dayjs": "^1.5.16"
   }
 }
