@@ -1,0 +1,74 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js
+
+PATH: 
+  /home/degroote/bin:/home/degroote/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  8.9.4
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "eh-dia-util",
+    "version": "1.0.1",
+    "description": "Hoje é um dia útil? Qual é o próximo dia útil? Pequena lógica para determinar o próximo (ou se hoje é) dia útil considerando fériados nacionais (móveis ou não).",
+    "main": "index.js",
+    "directories": {
+      "test": "test"
+    },
+    "scripts": {
+      "test": "mocha test/*.spec.js",
+      "autotest": "./node_modules/.bin/supervisor -q -n exit -x npm test"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/lfreneda/eh-dia-util.git"
+    },
+    "keywords": [
+      "feriados",
+      "brasil",
+      "brazil",
+      "holidays",
+      "business",
+      "day",
+      "working-day",
+      "business-day",
+      "feriado",
+      "dia-útil"
+    ],
+    "author": "Luiz Freneda <lfreneda@gmail.com> (http://www.freneda.com.br/)",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/lfreneda/eh-dia-util/issues"
+    },
+    "homepage": "https://github.com/lfreneda/eh-dia-util#readme",
+    "devDependencies": {
+      "chai": "^4.1.2",
+      "mocha": "^3.5.0",
+      "supervisor": "^0.12.0"
+    },
+    "dependencies": {
+      "chai": "^4.1.2",
+      "mocha": "^3.5.0",
+      "moment": "^2.18.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/chai: ETIMEDOUT
+      at Timeout._onTimeout (/usr/share/yarn/lib/cli.js:123749:19)
+      at ontimeout (timers.js:475:11)
+      at tryOnTimeout (timers.js:310:5)
+      at Timer.listOnTimeout (timers.js:270:5)
